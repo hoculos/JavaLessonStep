@@ -3,7 +3,6 @@
  *
  * @author UgaevEugen
  */
-
 import LessonThreeStep.HorizontalLine;
 import LessonThreeStep.SumOddIntegers;
 import LessonThreeStep.factorial;
@@ -16,29 +15,27 @@ public class main {
 
         //ArrayOne foo = new ArrayOne(); 
         //foo.ShowArray();
-        
-        
-        int a = 1; 
-        int res = 0;
-        res = a % 2; 
-        
-        System.out.print(res);
-        
-        /*
         int mass[] = {1, 2, 3, 6, 10};
+        int SumEven = 0;
+        int SumNotEven = 0;
 
-        int max = 0;
+        boolean SumEvenBool = true;
+        boolean SumNotEvenBool = true;
 
         for (int i = 0; i < mass.length; i++) {
-            max = mass[i];
 
-            if (max < mass[i]) {
-                max = mass[i];
+            SumEvenBool = (mass[i] % 2 == 0);
+            if (SumEvenBool) {
+                SumEven = SumEven + mass[i];
             }
-            //System.out.print(mass[i]);
+
+            SumNotEvenBool = (mass[i] % 2 == 1);
+            if (SumNotEvenBool) {
+                SumNotEven = SumNotEven + mass[i]; 
+            }
         }
 
-        System.out.print(max);
-*/
+        System.out.println(SumEven);
+        System.out.print(SumNotEven);
     }
 }
