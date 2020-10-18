@@ -1,0 +1,1 @@
+${licensePrefix} @author UgaevEugene
