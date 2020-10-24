@@ -20,7 +20,13 @@ public class ArrayOne {
     private int Array[] = new int[10];
     private final int in = 0;
     private final int out = 10;
-  
+    private int SumEven = Array[0];
+    private int SumNotEven = Array[0];
+    private int MinSumNotEven = Array[0];
+    private int EvenAndNotEven[] = new int[3];
+
+    boolean SumEvenBool = true;
+    boolean SumNotEvenBool = true;
 
     private int[] CreateArray() {
 
@@ -50,6 +56,40 @@ public class ArrayOne {
         return ReverseArray;
     }
 
+    private int[] EvenAndNotEven() {
+
+        for (int i = 0; i < Array.length; i++) {
+            //Сумма четных
+            SumEvenBool = (Array[i] % 2 == 0);
+            if (SumEvenBool) {
+                SumEven = SumEven + Array[i];
+            }
+            //Сумма не четных
+            SumNotEvenBool = (Array[i] % 2 == 1);
+            if (SumNotEvenBool) {
+                SumNotEven = SumNotEven + Array[i];
+            }
+
+        }
+        //Минимальное не четное
+        for (int i = 0; i < Array.length; i++) {
+
+            if (Array[i] % 2 == 1) {
+                if (MinSumNotEven > Array[i]) {
+                    MinSumNotEven = Array[i];
+                }
+
+            }
+
+        }
+
+        EvenAndNotEven[0] = SumEven;
+        EvenAndNotEven[1] = SumNotEven;
+        EvenAndNotEven[2] = MinSumNotEven;
+
+        return EvenAndNotEven;
+    }
+
     public void ShowArray() {
 
         ImplementationArray();
@@ -68,6 +108,12 @@ public class ArrayOne {
             System.out.print(ReverseArray[i]);
 
         }
+
+        EvenAndNotEven();
+        System.out.println("\n");
+        System.out.println("SumEven: " + EvenAndNotEven[0]);
+        System.out.println("SumNotEven: " + EvenAndNotEven[1]);
+        System.out.println("NimSumNotEven: " + EvenAndNotEven[2]);
 
     }
 
