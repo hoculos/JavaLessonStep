@@ -13,6 +13,8 @@ package LessonSixStep;
  * Написать программу, которая находит в массиве самое маленькое нечетное число
  * и показывает его на экран.
  */
+
+
 public class ArrayOne {
 
     private final int ReverseArray[] = new int[10];
@@ -23,8 +25,8 @@ public class ArrayOne {
     private int SumEven = Array[0];
     private int SumNotEven = Array[0];
     private int MinSumNotEven = Array[0];
-    private int EvenAndNotEven[] = new int[3];
-
+    private final int EvenAndNotEven[] = new int[3];
+    
     boolean SumEvenBool = true;
     boolean SumNotEvenBool = true;
 
@@ -75,6 +77,7 @@ public class ArrayOne {
         for (int i = 0; i < Array.length; i++) {
 
             if (Array[i] % 2 == 1) {
+                    MinSumNotEven = Array[i];
                 if (MinSumNotEven > Array[i]) {
                     MinSumNotEven = Array[i];
                 }
@@ -110,10 +113,11 @@ public class ArrayOne {
         }
 
         EvenAndNotEven();
+        
         System.out.println("\n");
         System.out.println("SumEven: " + EvenAndNotEven[0]);
         System.out.println("SumNotEven: " + EvenAndNotEven[1]);
-        System.out.println("NimSumNotEven: " + EvenAndNotEven[2]);
+        System.out.println("MimSumNotEven: " + EvenAndNotEven[2]);
 
     }
 
