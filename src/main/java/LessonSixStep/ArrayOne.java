@@ -117,7 +117,7 @@ public class ArrayOne {
         System.out.println("\n");
         System.out.println("SumEven: " + EvenAndNotEven[0]);
         System.out.println("SumNotEven: " + EvenAndNotEven[1]);
-        System.out.println("MimSumNotEven: " + EvenAndNotEven[2]);
+        System.out.println("MinSumNotEven: " + EvenAndNotEven[2]);
 
     }
 
